@@ -76,10 +76,27 @@ product-design-skill/
 ├── README.md              # 本文件
 ├── LICENSE                # MIT 协议
 ├── .gitignore
-├── product-design.skill   # 一键安装包
+├── product-design.skill   # 一键安装包（Skill）
 └── product-design/
     └── SKILL.md           # 技能核心文件
+└── .claude/
+    └── agents/
+        └── product-designer.md   # Claude Code 子代理（@product-designer）
 ```
+
+## 进阶：作为 Agent 使用（@product-designer）
+
+除了作为 Skill，本仓库还附带了一个 Claude Code 子代理定义（`.claude/agents/product-designer.md`），把同样的方法论封装成可 `@` 调用的常驻 agent，能自主读文件、写文档、生成 docx/xlsx。
+
+使用方式：将 `.claude/agents/product-designer.md` 复制到你的 Claude Code 项目的 `.claude/agents/` 目录（或 `~/.claude/agents/` 全局目录），然后在对话中输入：
+
+```
+@product-designer 帮我写一份财富新手首投活动的 PRD
+```
+
+它就会自动按「具体可落地」的标准，自主产出带业务规则、状态流转、埋点、验收标准的文档。
+
+> Skill 与 Agent 的区别：Skill 是"教 AI 怎么干对"的操作手册（被动触发）；Agent 是"会自己动手干"的智能体（Skill 作为大脑 + 工具作为手 + 自主循环）。本仓库两者都提供，可按需选用。
 
 ## 许可
 
