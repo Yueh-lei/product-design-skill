@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# 临时文件
+*.tmp
+*.log
+
+# 依赖（如未来加入脚本，可放开注释）
+node_modules/
+__pycache__/
