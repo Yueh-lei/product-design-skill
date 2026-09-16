@@ -77,8 +77,8 @@ product-design-skill/
 ├── LICENSE                # MIT 协议
 ├── .gitignore
 ├── product-design.skill   # 一键安装包（Skill）
-└── product-design/
-    └── SKILL.md           # 技能核心文件
+├── product-design/
+│   └── SKILL.md           # 技能核心文件
 └── .claude/
     └── agents/
         └── product-designer.md   # Claude Code 子代理（@product-designer）
@@ -96,7 +96,20 @@ product-design-skill/
 
 它就会自动按「具体可落地」的标准，自主产出带业务规则、状态流转、埋点、验收标准的文档。
 
-> Skill 与 Agent 的区别：Skill 是"教 AI 怎么干对"的操作手册（被动触发）；Agent 是"会自己动手干"的智能体（Skill 作为大脑 + 工具作为手 + 自主循环）。本仓库两者都提供，可按需选用。
+## 什么时候用 Skill，什么时候用 Agent
+
+两者本质区别：**Skill 是"教 AI 怎么干对"的操作手册，被动触发；Agent 是"会自己动手干"的智能体**（Skill 作为大脑 + 工具作为手 + 自主循环）。本仓库两者都提供，按场景选择：
+
+| 场景 | 用 Skill | 用 Agent |
+|------|---------|---------|
+| 你边聊边改，想要 AI 按你的节奏一步步来 | ✅ 首选 | 略重 |
+| 产出一次性的方案/文档，随时提需求 | ✅ 够用 | 也可 |
+| 想要"一句话丢出去，自动干完交付" | 不够 | ✅ 首选 |
+| 批量/多步骤任务（读文件→写文档→校验） | 需手动拆 | ✅ 省心 |
+| 团队统一标准、约束所有人的产出质量 | ✅ 分发简单 | ✅ 更强约束 |
+| 不想写任何代码、零门槛 | ✅ 装包即用 | 需配目录 |
+
+简单记忆：**要"帮我想/一起做"，用 Skill；要"替我做完"，用 Agent。** 建议先装 Skill 跑顺，觉得需要自动化了，再启用 Agent。
 
 ## 许可
 
